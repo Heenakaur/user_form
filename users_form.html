@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-3.1.0.slim.min.js"
+                integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+        <script src="myFunction.js"></script>
+    </head>
+    <body>
+        <form id="user" method="post" action="users_form.html">
+            <table>
+                <tr>
+                    <td>
+                        <label>
+                            First Name
+                        </label>
+                    </td>
+                    <td>
+                        <input name="firstname" type="text" width="100" id="firstname"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Last NAme
+                        </label>
+                    </td>
+                    <td>
+                        <input name="lastname" type="text" width="100"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Email ID
+                        </label>
+                    </td>
+                    <td>
+                        <input name="emailid" type="text" width="100"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Description of user
+                        </label>
+                    </td>
+                    <td>
+                        <input name="description of user" type="text" width="1000"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Gender
+                        </label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            Checkbox
+                        </label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="teacher" id="teacher" value="1"/>
+                        <label for="teacher">Teacher</label>
+
+                        <input type="checkbox" name="engineer" value="2"/>
+                        <input type="checkbox" name="housewife" value="3"/>
+                        <input type="checkbox" name="ca" value="4"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        <input type="button" value="Show Information">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <p>Below all the selected data will be displayed:</p>
+        <div id="selectedData">
+
+        </div>
+    </body>
+</html>
+
