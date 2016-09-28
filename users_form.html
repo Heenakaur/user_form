@@ -21,11 +21,11 @@
                 <tr>
                     <td>
                         <label>
-                            Last NAme
+                            Last Name
                         </label>
                     </td>
                     <td>
-                        <input name="lastname" type="text" width="100"/>
+                        <input name="lastname" type="text" width="100" id="lastname"/>
                     </td>
                 </tr>
                 <tr>
@@ -35,7 +35,7 @@
                         </label>
                     </td>
                     <td>
-                        <input name="emailid" type="text" width="100"/>
+                        <input name="emailid" type="text" width="100" id="email"/>
                     </td>
                 </tr>
                 <tr>
@@ -45,7 +45,7 @@
                         </label>
                     </td>
                     <td>
-                        <input name="description of user" type="text" width="1000"/>
+                        <input name="description of user" type="text" width="1000" id="description"/>
                     </td>
                 </tr>
                 <tr>
@@ -55,8 +55,8 @@
                         </label>
                     </td>
                     <td>
-                        <input type="radio" name="gender" value="male"> Male
-                        <input type="radio" name="gender" value="female"> Female
+                        <input type="radio" name="gender" value="male" class="gender"> Male
+                        <input type="radio" name="gender" value="female" class="gender"> Female
                     </td>
                 </tr>
                 <tr>
@@ -69,9 +69,14 @@
                         <input type="checkbox" name="teacher" id="teacher" value="1"/>
                         <label for="teacher">Teacher</label>
 
-                        <input type="checkbox" name="engineer" value="2"/>
-                        <input type="checkbox" name="housewife" value="3"/>
-                        <input type="checkbox" name="ca" value="4"/>
+                        <input type="checkbox" name="engineer" id="engineer" value="2"/>
+                        <label for="engineer">Engineer</label>
+
+                        <input type="checkbox" name="housewife" id="housewife" value="3"/>
+                        <label for="housewife">Housewife</label>
+
+                        <input type="checkbox" name="ca" id="ca" value="4"/>
+                        <label for="ca">CA</label>
                     </td>
                 </tr>
                 <tr>
@@ -85,9 +90,7 @@
             </table>
         </form>
         <p>Below all the selected data will be displayed:</p>
-        
         <div id="selectedData">
-
         </div>
     </body>
 </html>
