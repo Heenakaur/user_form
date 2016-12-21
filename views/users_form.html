@@ -4,10 +4,24 @@
         <script src="http://code.jquery.com/jquery-3.1.0.slim.min.js"
                 integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
-        <script src="myFunction.js"></script>
+        <script src="../js/myFunction.js"></script>
+        <style>
+
+            label.error {
+                color: red;
+                display: block;
+                line-height: 16px;
+            }
+            td {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+
+        </style>
     </head>
     <body>
-        <form id="user" method="post" action="users_form.html">
+        <form id="user" method="post" action="../controller/users_form.php">
             <table>
                 <tr>
                     <td>
@@ -46,7 +60,7 @@
                         </label>
                     </td>
                     <td>
-                        <input name="description of user" type="text" width="1000" id="description"/>
+                        <input name="description" type="text" width="1000" id="description"/>
                     </td>
                 </tr>
                 <tr>
@@ -63,20 +77,20 @@
                 <tr>
                     <td>
                         <label>
-                            Checkbox
+                            Skills
                         </label>
                     </td>
                     <td>
-                        <input type="checkbox" name="teacher" id="teacher" value="1"/>
+                        <input type="checkbox" name="checkbox" id="teacher" value="1"/>
                         <label for="teacher">Teacher</label>
 
-                        <input type="checkbox" name="engineer" id="engineer" value="2"/>
+                        <input type="checkbox" name="checkbox" id="engineer" value="2"/>
                         <label for="engineer">Engineer</label>
 
-                        <input type="checkbox" name="housewife" id="housewife" value="3"/>
+                        <input type="checkbox" name="checkbox" id="housewife" value="3"/>
                         <label for="housewife">Housewife</label>
 
-                        <input type="checkbox" name="ca" id="ca" value="4"/>
+                        <input type="checkbox" name="checkbox" id="ca" value="4"/>
                         <label for="ca">CA</label>
                     </td>
                 </tr>
@@ -89,10 +103,13 @@
                     </td>
                 </tr>
             </table>
+
+            <div id="selectedData">
+            </div>
         </form>
         <p>Below all the selected data will be displayed:</p>
-        <div id="selectedData">
-        </div>
+
+
     </body>
 </html>
 
