@@ -1,7 +1,4 @@
-table#custom{
-    border: 1px solid red;
-}
-div.table.custom {
+table#custom {
     border: 1px solid blueviolet;
     height: auto;
     width: auto;

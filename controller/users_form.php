@@ -7,25 +7,38 @@ if($_POST) {
     saveUser($_POST["firstname"], $_POST["lastname"], $_POST["email_id"], $_POST["description"], $_POST["gender"]);
 }
 
+if($_GET && $_GET['delete'] && $_GET['delete'] == 'Delete')
+{
+    //Add code to delete the record.
+    echo $_GET['recordId'];
+}
+
 //Call the function function for get users, the function will return data in the form of Array.
 $users = getUser();
 //echo '<pre>';
 //print_r($users);
 //die;
 //Apply for or foreach loop to list all the users in the table format.
-
+//echo"<th>S.no<th";
 if (is_array($users) && $users) {
+    echo "<table id ='custom'>";
     foreach ($users as $i => $user) {
-        echo" <table id ='custom'>
-                 <tr>
-                     <td>$i </td>
-                     <td>{$user['firstname']}</td>
-                     <td>{$user['lastname']}</td>
-                     <td>{$user['email_id']}</td>
-                     <td>{$user['description']}</td>
-                     <td>{$user['gender']}</td>
-                 </tr>  
-              </table>";
+                 echo "<tr>
+                      <td>".($i+1)."</td>
+                     <td>".$user['firstname']."</td>
+                     <td>".$user['lastname']."</td>
+                     <td>".$user['email_id']."</td>
+                     <td>".$user['description']."</td>
+                     <td>".$user['gender']."</td>
+                     <td>
+                        <form method = 'get' action = ''>
+                            <input name = 'delete' type = 'submit' value = 'Delete'>
+                            <input name = 'recordId' type = 'hidden' value = '".$user['id']."'>
+                        </form>
+                     </td>
+                 </tr>";
+
     }
+    echo "</table>";
 }
 ?>
