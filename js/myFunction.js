@@ -14,7 +14,7 @@ $(document).ready(function(){
             required: true,
             number: false
           },
-          emailid: {
+          email_id: {
             required: true,
             // Specify that email should be validated
             // by the built-in "email" rule
@@ -36,7 +36,7 @@ $(document).ready(function(){
             required: "Please enter your lastname.",
             number: "Your name should not contain any number."
           },
-          emailid: {
+          email_id: {
             required: "Please enter your email ID.",
             email: "Your email ID should be in format yourname@domain.com"
           },
@@ -73,7 +73,7 @@ $(document).ready(function(){
       firstname = $('input#firstname').val();
       lastname = $('input#lastname').val();
       //get value of the textfield with id email.
-      emailid = $('input#email').val();
+      email_id = $('input#email').val();
 
       //get value of the textfield with id description.
       description = $('input#description').val();
@@ -90,7 +90,7 @@ $(document).ready(function(){
       html += '<label>Lastname</label>: ';
       html += lastname + '<br>';
       html += '<label>Email ID</label>: ';
-      html += emailid + '<br>';
+      html += email_id + '<br>';
       html += '<label>Description of user</label>: ';
       html += description + '<br>';
       html += '<label>Gender</label>: ';

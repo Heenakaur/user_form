@@ -1,5 +1,14 @@
-div.custom
-{
-    width: 200px;
-    border: 1px solid cornflowerblue;
+table#custom{
+    border: 1px solid red;
+}
+div.table.custom {
+    border: 1px solid blueviolet;
+    height: auto;
+    width: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: larger;
+    font-weight: bold;
+    background: wheat;
+    display: table-row-group;
 }
