@@ -19,17 +19,25 @@ $users = getUser();
 //print_r($users);
 //die;
 //Apply for or foreach loop to list all the users in the table format.
-//echo"<th>S.no<th";
 if (is_array($users) && $users) {
-    echo "<table id ='custom'>";
+    echo "<table id ='custom'>
+               <tr> 
+                <th>S.no</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>EmailId</th>
+                <th>Description</th>
+                <th>Gender</th>
+                <th></th>
+               </tr>";
     foreach ($users as $i => $user) {
                  echo "<tr>
-                      <td>".($i+1)."</td>
-                     <td>".$user['firstname']."</td>
-                     <td>".$user['lastname']."</td>
-                     <td>".$user['email_id']."</td>
-                     <td>".$user['description']."</td>
-                     <td>".$user['gender']."</td>
+                      <td class='sam'>".($i+1)."</td>
+                     <td class='sam'>".$user['firstname']."</td>
+                     <td class='sam'>".$user['lastname']."</td>
+                     <td class='sam'>".$user['email_id']."</td>
+                     <td class='sam'>".$user['description']."</td>
+                     <td class='sam'>".$user['gender']."</td>
                      <td>
                         <form method = 'get' action = ''>
                             <input name = 'delete' type = 'submit' value = 'Delete'>

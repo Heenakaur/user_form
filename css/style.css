@@ -9,3 +9,18 @@ table#custom {
     background: wheat;
     display: table-row-group;
 }
+tr {
+    border: 1px solid;
+    font-weight: bolder;
+    font-size: x-large;
+}
+td {
+    border: 1px solid black;
+    padding-right: 10px;
+    padding-left: 20px;
+    displal: block;
+}
+th {
+    border: 1px solid black;
+    font-family: cursive;
+}
