@@ -39,4 +39,10 @@ function getUser()
 
     return $result;
 }
+
+function deleteUser($userId)
+{
+    //Todo: Add query to delete the record with ID which $userId will have inside it.
+}
+
 ?>
