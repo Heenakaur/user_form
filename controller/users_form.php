@@ -12,7 +12,7 @@ if($_GET && $_GET['delete'] && $_GET['delete'] == 'Delete')
     //Add code to delete the record.
     echo $_GET['recordId'];
 }
-
+ 
 //Call the function function for get users, the function will return data in the form of Array.
 $users = getUser();
 //echo '<pre>';
@@ -32,12 +32,12 @@ if (is_array($users) && $users) {
                </tr>";
     foreach ($users as $i => $user) {
                  echo "<tr>
-                      <td class='sam'>".($i+1)."</td>
-                     <td class='sam'>".$user['firstname']."</td>
-                     <td class='sam'>".$user['lastname']."</td>
-                     <td class='sam'>".$user['email_id']."</td>
-                     <td class='sam'>".$user['description']."</td>
-                     <td class='sam'>".$user['gender']."</td>
+                      <td>".($i+1)."</td>
+                     <td>".$user['firstname']."</td>
+                     <td>".$user['lastname']."</td>
+                     <td>".$user['email_id']."</td>
+                     <td>".$user['description']."</td>
+                     <td>".$user['gender']."</td>
                      <td>
                         <form method = 'get' action = ''>
                             <input name = 'delete' type = 'submit' value = 'Delete'>
