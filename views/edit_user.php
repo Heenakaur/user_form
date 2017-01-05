@@ -14,11 +14,28 @@ if( ($_GET['edit'] == 'Edit') && $_GET['id'] )
 
     //Below I have shown an example.
 ?>
-
-
-    <input type = 'text' name = '' value = '<?php echo $_GET['firstname']; ?>'>
-
-
+   <table id ='sam'
+          <tr>
+              <th>Id</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>EmailId</th>
+              <th>Description</th>
+              <th>Gender</th>
+          </tr>
+          <tr>
+              <td>
+                  <form method = 'get' action = '../views/edit_user.php'
+                  <input type = 'text' name = 'id' value = '<?php echo $_GET['id']; ?>'>
+                  <input type = 'text' name = 'firstname' value = '<?php echo $_GET['firstname']; ?>'>
+                  <input type = 'text' name = 'lastname' value = '<?php echo $_GET['lastname']; ?>'>
+                  <input type = 'text' name = 'emailId' value = '<?php echo $_GET['email_id']; ?>'>
+                  <input type = 'text' name = 'description' value = '<?php echo $_GET['description']; ?>'>
+                  <input type = 'text' name = 'gender' value = '<?php echo $_GET['gender']; ?>'>
+                  </form>
+              </td>
+          </tr>
+   </table>
 <?php
 }
     

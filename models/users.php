@@ -39,10 +39,14 @@ function getUser()
 
     return $result;
 }
-
 function deleteUser($userId)
 {
-    //Todo: Add query to delete the record with ID which $userId will have inside it.
+    global $conn;
+    // sql to delete a record.
+    $sql = "DELETE FROM users WHERE id=" . $userId;
+
+    // use exec() because no results are returned
+    $conn->exec($sql);
 }
 
-?>
+
