@@ -14,28 +14,34 @@ if( ($_GET['edit'] == 'Edit') && $_GET['id'] )
 
     //Below I have shown an example.
 ?>
-   <table id ='sam'
-          <tr>
-              <th>Id</th>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>EmailId</th>
-              <th>Description</th>
-              <th>Gender</th>
-          </tr>
-          <tr>
-              <td>
-                  <form method = 'get' action = '../views/edit_user.php'
-                  <input type = 'text' name = 'id' value = '<?php echo $_GET['id']; ?>'>
-                  <input type = 'text' name = 'firstname' value = '<?php echo $_GET['firstname']; ?>'>
-                  <input type = 'text' name = 'lastname' value = '<?php echo $_GET['lastname']; ?>'>
-                  <input type = 'text' name = 'emailId' value = '<?php echo $_GET['email_id']; ?>'>
-                  <input type = 'text' name = 'description' value = '<?php echo $_GET['description']; ?>'>
-                  <input type = 'text' name = 'gender' value = '<?php echo $_GET['gender']; ?>'>
-                  </form>
-              </td>
-          </tr>
-   </table>
+<div id = 'editUserForm'>
+    <form method = 'get' action = ''>
+        <table>
+            <input type = 'hidden' name = 'id' value = '<?php echo $_GET['id']; ?>'>
+            <tr>
+                <td>First Name: </td>
+                <td><input type = 'text' name = 'firstname' value = '<?php echo $_GET['firstname']; ?>'></td>
+            </tr>
+            <tr>
+                <td>Last Name: </td>
+                <td><input type = 'text' name = 'lastname' value = '<?php echo $_GET['lastname']; ?>'></td>
+            </tr>
+            <tr>
+                <td> Email ID: </td>
+                <td><input type = 'text' name = 'emailId' value = '<?php echo $_GET['emailId']; ?>'></td>
+            </tr>
+            <tr>
+                <td>Description: </td>
+                <td><input type = 'text' name = 'description' value = '<?php echo $_GET['description']; ?>'></td>
+            </tr>
+            <tr>
+                <td>Gender: </td>
+                <td><input type = 'text' name = 'gender' value = '<?php echo $_GET['gender']; ?>'></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
 <?php
 }
     
