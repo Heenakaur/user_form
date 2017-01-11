@@ -26,7 +26,9 @@ function saveUser($firstname, $lastname, $email_id, $description, $gender)
 }
 
 
-
+/**
+ * @return array
+ */
 function getUser()
 {
     global $conn;
@@ -39,6 +41,10 @@ function getUser()
 
     return $result;
 }
+
+/**
+ * @param $userId
+ */
 function deleteUser($userId)
 {
     global $conn;
@@ -48,10 +54,18 @@ function deleteUser($userId)
     // use exec() because no results are returned
     $conn->exec($sql);
 }
-function updateUser($userId)
+
+/**
+ * Updates user data in DB.
+ *
+ * @param array $userData [id, firstname, lastname, emailId, description, gender]
+ * @author jsingh7
+ * @version 1.0
+ */
+function updateUser(array $userData)
 {
     global $conn;
-    $sql =  $sql = "UPDATE users SET firstname= 'Firstname', Lastname= 'Lastname', emailid= 'EmailId', description= 'Description', gender= 'Gender' WHERE id=$userId";
+    $sql = "UPDATE users SET firstname= ".$userData['firstname'].", lastname= ".$userData['lastname'].", emailid= ".$userData['emailId'].", description= ".$userData['description'].", gender= ".$userData['gender']." WHERE id=".$userData['id'];
 
     $conn->exec($sql);
 }

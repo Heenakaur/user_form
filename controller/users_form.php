@@ -13,6 +13,12 @@ if($_GET && $_GET['delete'] && $_GET['delete'] == 'Delete')
     //Calling function to remove a record and passing user ID to that function.
     deleteUser($_GET['recordId']);
 }
+
+//If EDIT USER form submitted.
+if($_GET && $_GET['updateUser'] == 'Update User')
+{
+    updateUser($_GET);
+}
  
 //Call the function function for get users, the function will return data in the form of Array.
 $users = getUser();
