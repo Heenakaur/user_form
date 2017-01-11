@@ -6,7 +6,7 @@ if( ($_GET['edit'] == 'Edit') && $_GET['id'] )
 {
 ?>
 <div id = 'editUserForm'>
-    <form method = 'get' action = ''>
+    <form method = 'get' action = '../controller/users_form.php'>
         <table>
             <input type = 'hidden' name = 'id' value = '<?php echo $_GET['id']; ?>'>
             <tr>
