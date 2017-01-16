@@ -2,7 +2,8 @@
 
 <?php
 //Checking that if some body has clicked 'edit' button and also some 'id' is received.
-if( ($_GET['edit'] == 'Edit') && $_GET['id'] )
+
+if($_GET && ($_GET['edit'] == 'Edit') && $_GET['id'])
 {
 ?>
 <div id = 'editUserForm'>

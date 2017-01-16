@@ -65,7 +65,12 @@ function deleteUser($userId)
 function updateUser(array $userData)
 {
     global $conn;
-    $sql = "UPDATE users SET firstname= ".$userData['firstname'].", lastname= ".$userData['lastname'].", emailid= ".$userData['emailId'].", description= ".$userData['description'].", gender= ".$userData['gender']." WHERE id=".$userData['id'];
+    $sql = "UPDATE users SET firstname= '".$userData['firstname']."'
+    , lastname= '".$userData['lastname']."'
+    , email_id= '".$userData['emailId']."'
+    , description= '".$userData['description']."'
+    , gender= '".$userData['gender']."'
+    WHERE id=".$userData['id'];
 
     $conn->exec($sql);
 }

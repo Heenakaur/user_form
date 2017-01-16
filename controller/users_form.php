@@ -8,14 +8,14 @@ if($_POST) {
 }
 
 //Checking that if somebody have submitted form with method GET and sent $_GET['delete']
-if($_GET && $_GET['delete'] && $_GET['delete'] == 'Delete')
+if($_GET && isset($_GET['delete']) && $_GET['delete'] == 'Delete')
 {
     //Calling function to remove a record and passing user ID to that function.
     deleteUser($_GET['recordId']);
 }
 
 //If EDIT USER form submitted.
-if($_GET && $_GET['updateUser'] == 'Update User')
+if($_GET && isset($_GET['updateUser']) && $_GET['updateUser'] == 'Update User')
 {
     updateUser($_GET);
 }
