@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/edit.css">
 
 <?php
 //Checking that if some body has clicked 'edit' button and also some 'id' is received.
@@ -6,8 +6,9 @@
 if($_GET && ($_GET['edit'] == 'Edit') && $_GET['id'])
 {
 ?>
+    <script src="../js/newFunction.js"></script>
 <div id = 'editUserForm'>
-    <form method = 'get' action = '../controller/users_form.php'>
+    <form method = 'get' action = '../controller/users_form.php' id="editUser">
         <table>
             <input type = 'hidden' name = 'id' value = '<?php echo $_GET['id']; ?>'>
             <tr>

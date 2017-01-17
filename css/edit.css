@@ -1,0 +1,19 @@
+div#editUserForm {
+    border: 1px solid black;
+    float: left;
+    width: auto;
+    height: auto;
+    background: ghostwhite;
+}
+td {
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+input {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
