@@ -9,6 +9,17 @@ if($_GET && ($_GET['edit'] == 'Edit') && $_GET['id'])
     <script src="../js/library/jquery-3.1.1.slim.min.js"></script>
     <script src="../js/library/jquery.validate.min.js"></script>
     <script src="../js/newFunction.js"></script>
+    <style>
+        td {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        label.error {
+            color: red;
+            display: block;
+            line-height: 40px;
+        }
+    </style>
 <div id = 'editUserForm'>
     <form method = 'get' action = '../controller/users_form.php' id="editUser">
         <table>

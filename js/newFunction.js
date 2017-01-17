@@ -54,3 +54,32 @@ $(document).ready(function() {
 
     )
 });
+//adding custom method to jquery validate.
+jQuery.validator.addMethod("AlphaOnly", function(value, element) {
+    return this.optional(element) || /^[a-z]+$/i.test(value);
+}, "Please enter alphabets only.");
+
+
+
+//On button click binding.
+
+$("form#editUser input[type=submit]").click(function() {
+
+    if ($("form#user").valid() == true) {
+        //get value of the textfield with id firstname.
+        //get value of the textfield with id lastname.
+        firstname = $('input#firstname').val();
+        lastname = $('input#lastname').val();
+        //get value of the textfield with id email.
+        emailid = $('input#email').val();
+
+        //get value of the textfield with id description.
+        description = $('input#description').val();
+
+        //get the value of the radio button with class gender.
+        gender = $("input[name=gender]:checked").val();
+
+        //get the value of the checkboxes with different id's.
+        skills = $('input[name=skills]:checked').val();
+    }
+});
