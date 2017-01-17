@@ -13,7 +13,7 @@ $(document).ready(function() {
                     required: true,
                     number: false
                 },
-                emailid: {
+                emailId: {
                     required: true,
                     // Specify that email should be validated
                     // by the built-in "email" rule
@@ -35,7 +35,7 @@ $(document).ready(function() {
                     required: "Please enter your lastname.",
                     number: "Your name should not contain any number."
                 },
-                email_id: {
+                emailId: {
                     required: "Please enter your email ID.",
                     email: "Your email ID should be in format yourname@domain.com"
                 },

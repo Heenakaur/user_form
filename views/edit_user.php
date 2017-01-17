@@ -6,6 +6,8 @@
 if($_GET && ($_GET['edit'] == 'Edit') && $_GET['id'])
 {
 ?>
+    <script src="../js/library/jquery-3.1.1.slim.min.js"></script>
+    <script src="../js/library/jquery.validate.min.js"></script>
     <script src="../js/newFunction.js"></script>
 <div id = 'editUserForm'>
     <form method = 'get' action = '../controller/users_form.php' id="editUser">
