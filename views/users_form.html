@@ -1,8 +1,9 @@
+<?php
+include('../views/layout/header.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="../js/library/jquery-3.1.1.slim.min.js"></script>
-        <script src="../js/library/jquery.validate.min.js"></script>
         <script src="../js/myFunction.js"></script>
         <style>
 
@@ -69,8 +70,8 @@
                         </label>
                     </td>
                     <td>
-                        <input type="radio" name="gender" value="male" class="gender"> Male
-                        <input type="radio" name="gender" value="female" class="gender"> Female
+                        <label>  <input type="radio" name="gender" value="male" class="gender">Male </label>
+                        <label> <input type="radio" name="gender" value="female" class="gender"> Female </label>
                     </td>
                 </tr>
                 <tr>
@@ -107,8 +108,9 @@
             </div>
         </form>
         <p>Below all the selected data will be displayed:</p>
-
-
     </body>
 </html>
+<?php
+include('../views/layout/footer.php');
+?>
 

@@ -49,7 +49,7 @@ function deleteUser($userId)
 {
     global $conn;
     // sql to delete a record.
-    $sql = "DELETE FROM users WHERE id" . $userId;
+    $sql = "DELETE FROM users WHERE id=" . $userId;
 
     // use exec() because no results are returned
     $conn->exec($sql);

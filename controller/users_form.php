@@ -1,3 +1,7 @@
+<?php
+include('../views/layout/header.php');
+?>
+
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <?php
 include_once ('../models/users.php');
@@ -19,7 +23,7 @@ if($_GET && isset($_GET['updateUser']) && $_GET['updateUser'] == 'Update User')
 {
     updateUser($_GET);
 }
- 
+
 //Call the function function for get users, the function will return data in the form of Array.
 $users = getUser();
 //echo '<pre>';
@@ -38,13 +42,25 @@ if (is_array($users) && $users) {
                     <th></th>
                </tr>";
     foreach ($users as $i => $user) {
+
+        //Change gender value to display string instead of integer.
+        if($user['gender'] == 1)
+        {
+            $gender = "female";
+        }
+        else
+        {
+           $gender = "male";
+        }
+
+
          echo "<tr>
                     <td>".($i+1)."</td>
                     <td>".$user['firstname']."</td>
                     <td>".$user['lastname']."</td>
                     <td>".$user['email_id']."</td>
                     <td>".$user['description']."</td>
-                    <td>".$user['gender']."</td>
+                    <td>".$gender."</td>
                     <td>
                     <form method = 'get' action = ''>
                         <input name = 'delete' type = 'submit' value = 'Delete'>
@@ -67,4 +83,5 @@ if (is_array($users) && $users) {
     }
     echo "</table>";
 }
+include('../views/layout/footer.php');
 ?>
