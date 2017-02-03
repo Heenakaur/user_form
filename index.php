@@ -9,5 +9,4 @@
 define("PROJECT_DIR", "/user_form", false);
 define("JS_PATH", PROJECT_DIR.'/js', false);
 define("CSS_PATH", PROJECT_DIR.'/css', false);
-
 ?>
