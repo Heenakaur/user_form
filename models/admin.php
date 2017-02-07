@@ -11,12 +11,12 @@ include_once('../db/connection.php');
 
 function saveAdmin($username, $email_id, $password)
 {
-global $conn;
+    global $conn;
 
 
-$sql = "INSERT INTO admin (firstname, email_id, password)
-VALUES ('$username', '$email_id', '$password')";
-$conn->exec($sql);
+    $sql = "INSERT INTO admin (firstname, email_id, password)
+    VALUES ('$username', '$email_id', '$password')";
+    $conn->exec($sql);
 }
 /**
  * @return array
@@ -64,3 +64,13 @@ function updateAdmin(array $adminData)
     $conn->exec($sql);
 }
 
+function getAdminByusername($username){
+    //It will have have similar code like getUser() function but we will write query with where condition.
+}
+
+function validatePasswordOfAdmin($username, $password)
+{
+    //select query with where condition in which you have to pass both parameters.
+    //ref: http://www.w3schools.com/sql/sql_where.asp
+
+}

@@ -6,7 +6,7 @@ include('../views/layout/header.php');
 
 
 
-<form id="admin" method="post" action="../controller/users_form.php">
+<form id="admin" method="post" action="../controller/auth.php">
     <table>
         <tr>
             <td>
@@ -16,16 +16,6 @@ include('../views/layout/header.php');
             </td>
             <td>
                 <input name="username" type="text" width="100" id="username"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label>
-                    Email Id
-                </label>
-            </td>
-            <td>
-                <input name="email_id" type="text" width="100" id="email"/>
             </td>
         </tr>
         <tr>
