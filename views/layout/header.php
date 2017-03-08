@@ -8,4 +8,15 @@
     </head>
     <body>
         <div id="container">
-      
+            <div id="header">
+                <?php
+                    if (isset($_SESSION['auth'])) {
+                ?>
+                    <form action="<?php echo PROJECT_DIR?>/controller/auth.php"
+                          method="post" style="float: right;">
+                        <input type='submit' name="logout" value="Logout"/>
+                    </form>
+                <?php
+                    }
+                ?>
+            </div>

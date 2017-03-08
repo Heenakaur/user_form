@@ -1,5 +1,9 @@
 <?php
 include('../views/layout/header.php');
+if (!isset($_SESSION['auth'])) {
+    header('Location: '.PROJECT_DIR.'/views/login.php');
+    die;
+}
 ?>
     <link rel="stylesheet" type="text/css" href="../css/edit.css">
 <?php

@@ -2,11 +2,7 @@
 include('../views/layout/header.php');
 ?>
 
-
-
-
-
-<form id="admin" method="post" action="../controller/auth.php">
+<form id="admin" method="post" action="<?php echo PROJECT_DIR?>/controller/auth.php">
     <table>
         <tr>
             <td>
@@ -33,7 +29,7 @@ include('../views/layout/header.php');
 
             </td>
             <td>
-                <input type="submit" value="Login">
+                <input type="submit" name="login" value="Login">
             </td>
         </tr>
     </table>

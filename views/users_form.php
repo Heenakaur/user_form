@@ -1,7 +1,12 @@
 <?php
 include('../views/layout/header.php');
-?>
 
+// check login session
+if (!isset($_SESSION['auth'])) {
+    header('Location: '.PROJECT_DIR.'/views/login.php');
+    die;
+}
+?>
 
 <script src="../js/myFunction.js"></script>
 <style>

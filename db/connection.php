@@ -1,9 +1,7 @@
 <?php
-include_once ('../config.php');
 $servername = "localhost";
 $username = "root";
 $password = "";
-
 try {
     $conn = new PDO("mysql:host=$servername;dbname=users_form", $username, $password);
     // set the PDO error mode to exception

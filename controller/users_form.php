@@ -8,28 +8,37 @@ include_once ('../models/users.php');
 
 if($_POST) {
     //Call model functions in this controller to manipulate and save/update/delete/retrieve data.
-    saveUser($_POST["firstname"], $_POST["lastname"], $_POST["email_id"], $_POST["description"], $_POST["gender"]);
+    $userObj = new User();
+    $userObj->save($_POST["firstname"], $_POST["lastname"], $_POST["email_id"], $_POST["description"], $_POST["gender"]);
 }
 
 //Checking that if somebody have submitted form with method GET and sent $_GET['delete']
 if($_GET && isset($_GET['delete']) && $_GET['delete'] == 'Delete')
 {
     //Calling function to remove a record and passing user ID to that function.
-    deleteUser($_GET['recordId']);
+    $userObj = new User();
+    $userObj->delete($_GET['recordId']);
 }
 
 //If EDIT USER form submitted.
 if($_GET && isset($_GET['updateUser']) && $_GET['updateUser'] == 'Update User')
 {
-    updateUser($_GET);
+    $userObj = new User();
+    $userObj->update($_GET);
 }
 
 //Call the function function for get users, the function will return data in the form of Array.
-$users = getUser();
+$userObj = new User();
+$users = $userObj->get();
 //echo '<pre>';
 //print_r($users);
 //die;
 //Apply for or foreach loop to list all the users in the table format.
+if (!isset($_SESSION['auth'])) {
+    header('Location: '.PROJECT_DIR.'/views/login.php');
+    die;
+}
+
 if (is_array($users) && $users) {
     echo "<table id ='custom'>
                <tr> 
